@@ -53,22 +53,7 @@ export const MESSAGES = {
         INVALID_SIGNATURE: 'Invalid webhook signature.',
         MISSING_METADATA: 'Webhook event is missing required metadata.',
     },
-    PLAN: {
-        CREATED: 'Plan created successfully.',
-        FETCHED: 'Plan fetched successfully.',
-        LIST_FETCHED: 'Plans fetched successfully.',
-        UPDATED: 'Plan updated successfully.',
-        DELETED: 'Plan deleted successfully.',
-        NOT_FOUND: 'Plan not found.',
-        STATUS_CHANGED: 'Plan status updated successfully.',
-        POPULAR_STATUS_CHANGED: 'Plan popularity status updated successfully.',
-        RENEWED: 'Subscription renewed successfully.',
-        CHANGED: 'Subscription changed successfully.',
-        NO_SUBSCRIPTION: 'You do not have a subscription to renew.',
-        PLAN_INACTIVE: 'This plan is no longer available.',
-        ALREADY_ON_PLAN: 'You are already subscribed to this plan. Use renew instead.',
-        ALREADY_HAS_ACTIVE_PLAN: 'You already have an active plan. Please use renew or change plan.',
-    },
+
     PAYMENT: {
         FETCHED: 'Payment fetched successfully.',
         LIST_FETCHED: 'Payments fetched successfully.',
@@ -92,13 +77,7 @@ export const MESSAGES = {
         APPROVAL_PENDING: 'Your profile is under review.',
         ONBOARDING_COMPLETE: 'Onboarding completed successfully.',
     },
-    USER_PLAN: {
-        FETCHED: 'User plan fetched successfully.',
-        LIST_FETCHED: 'User plans fetched successfully.',
-        NOT_FOUND: 'User plan not found.',
-        NO_ACTIVE_PLAN: 'You do not have an active subscription plan.',
-        CLAIMS_LIMIT_REACHED: 'You have reached the maximum number of claims for your plan.',
-    },
+
     GENERAL: {
         FETCHED: 'Data fetched successfully.',
         CREATED: 'Resource created successfully.',

@@ -5,12 +5,10 @@ import type { PaymentTypeValue } from '@/modules/payments/payment.interface';
 
 export interface CreateCheckoutSessionInput {
     userId: string;
-    subscriptionId: string;
     paymentId: string;
     paymentType: PaymentTypeValue;
-    planTitle: string;
+    productName: string;
     amount: number;
-    previousUserPlanId?: string;
 }
 
 export class StripeService {
@@ -22,7 +20,7 @@ export class StripeService {
                 {
                     price_data: {
                         currency: config.stripe.currency,
-                        product_data: { name: input.planTitle },
+                        product_data: { name: input.productName },
                         unit_amount: Math.round(input.amount * 100),
                     },
                     quantity: 1,
@@ -30,10 +28,8 @@ export class StripeService {
             ],
             metadata: {
                 userId: input.userId,
-                subscriptionId: input.subscriptionId,
                 paymentId: input.paymentId,
                 paymentType: input.paymentType,
-                previousUserPlanId: input.previousUserPlanId ?? '',
             },
             success_url: `${config.serverBaseUrl}/payment/success?paymentId=${input.paymentId}&session_id={CHECKOUT_SESSION_ID}`,
             cancel_url: `${config.serverBaseUrl}/payment/cancel?paymentId=${input.paymentId}`,

@@ -1,7 +1,5 @@
 export const PaymentType = {
-    NEW_SUBSCRIPTION: 'new_subscription',
-    UPGRADE: 'upgrade',
-    RENEWAL: 'renewal',
+    PRODUCT_PURCHASE: 'product_purchase',
 } as const;
 
 export type PaymentTypeValue = (typeof PaymentType)[keyof typeof PaymentType];
