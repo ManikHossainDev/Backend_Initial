@@ -20,24 +20,7 @@ const settings = [
         title: 'About Us',
         content: '<p>We are a leading platform for property claims management, dedicated to providing fast and reliable service to landlords, homeowners, and renters.</p>',
         isPublic: true,
-    },
-    {
-        slug: 'delete_instructions',
-        title: 'Account Deletion Instructions',
-        content: '<p>To delete your account, please follow these steps: 1. Go to Profile Settings. 2. Click on Delete Account. 3. Confirm your decision. Your data will be permanently removed within 30 days.</p><img src="/uploads/delete-account-guide.png" alt="Account deletion guide" />',
-        isPublic: true,
-    },
-    {
-        slug: 'app_info',
-        title: 'App Information',
-        content: '',
-        isPublic: true,
-        metadata: {
-            emails: 'info@drft.com,support@drft.com',
-            phones: '+10000000000,+10000000001',
-            address: '123 Main Street, New York, NY 10001',
-        },
-    },
+    }
 ];
 
 export const seedSettings = async (): Promise<void> => {

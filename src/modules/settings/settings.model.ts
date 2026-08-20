@@ -6,7 +6,7 @@ const settingSchema = new Schema<ISettingDocument>(
     {
         slug: {
             type: String,
-            enum: ['privacy_policy', 'terms_and_conditions', 'about_us', 'delete_instructions', 'app_info'],
+            enum: ['privacy_policy', 'terms_and_conditions', 'about_us'],
             required: [true, 'Slug is required'],
             unique: true,
             index: true,
