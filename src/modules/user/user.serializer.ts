@@ -1,4 +1,4 @@
-import type { PlanSummary } from '../user-plan/user-plan.interface';
+// import type { PlanSummary } from '../user-plan/user-plan.interface';
 import type { IUserDocument } from './user.interface';
 
 export const serializeUser = (user: IUserDocument) => ({
@@ -23,7 +23,7 @@ export const serializeUser = (user: IUserDocument) => ({
     updatedAt: user.updatedAt,
 });
 
-export const serializeUserWithActivePlan = (user: IUserDocument, plan: PlanSummary | null) => (
+export const serializeUserWithActivePlan = (user: IUserDocument, plan: any | null) => (
     {
         id: user.id ?? (user as any)._id?.toString(),
         name: user.name,
